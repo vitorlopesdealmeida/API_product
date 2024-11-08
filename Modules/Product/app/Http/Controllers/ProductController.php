@@ -1,26 +1,25 @@
 <?php
 
-namespace Modules\Product\Http\Controllers;
+namespace Modules\Product\App\Http\Controllers;
 
-use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use Illuminate\Http\Response;
 
-class ProductController extends Controller
+use Modules\Product\App\Models\Product;
+use Modules\Product\App\Resources\ProductResource;
+
+class ProductController extends BaseController
 {
     /**
      * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return view('product::index');
-    }
-
-    /**
-     * Show the form for creating a new resource.
-     */
-    public function create()
-    {
-        return view('product::create');
+        $products = Product::paginate(20);
+        $response = $this->makeResponsePaginate(ProductResource::collection($products));
+        return response()->json($response, Response::HTTP_OK);
     }
 
     /**
@@ -36,15 +35,7 @@ class ProductController extends Controller
      */
     public function show($id)
     {
-        return view('product::show');
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     */
-    public function edit($id)
-    {
-        return view('product::edit');
+//        return view('product::show');
     }
 
     /**
