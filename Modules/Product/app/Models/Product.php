@@ -75,10 +75,16 @@ class Product extends Model
         return $query->where('name', 'like', "%$name%");
     }
 
+    public function scopeStatus($query, $status)
+    {
+        return $query->where('status', $status);
+    }
+
     public function scopeFilter($query, array $filters)
     {
         return $query
             ->when(! empty($filters['name']), fn ($query) => $query->name($filters['name']))
+            ->when(! empty($filters['status']), fn ($query) => $query->status($filters['status']))
             ;
     }
 }

@@ -15,9 +15,13 @@ class ProductController extends BaseController
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        $products = Product::paginate(20);
+        $filters = $request->only([
+            'name',
+            'status',
+        ]);
+        $products = Product::filter($filters)->paginate(20)->withQueryString();
         $response = $this->makeResponsePaginate(ProductResource::collection($products));
         return response()->json($response, Response::HTTP_OK);
     }
