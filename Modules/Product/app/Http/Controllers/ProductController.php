@@ -9,6 +9,7 @@ use Modules\Product\App\Models\Product;
 use Modules\Product\App\Repositories\ProductRepository;
 use Modules\Product\App\Resources\ProductResource;
 use Modules\Product\App\Http\Requests\StoreProductRequest;
+use Modules\Product\App\Http\Requests\UpdateProductRequest;
 
 class ProductController extends BaseController
 {
@@ -52,9 +53,10 @@ class ProductController extends BaseController
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, $id)
+    public function update(UpdateProductRequest $request, Product $product)
     {
-        //
+        $product->update($request->validated());
+        return response()->json(new ProductResource($product), Response::HTTP_OK);
     }
 
     /**
