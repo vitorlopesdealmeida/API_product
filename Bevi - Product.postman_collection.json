@@ -1,0 +1,666 @@
+{
+	"info": {
+		"_postman_id": "6d053462-489b-4307-bc07-230f8a1b2091",
+		"name": "Bevi - Product",
+		"description": "Documentação de API para Gerenciar Produtos.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "11057896"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "List",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true,
+							"accept-encoding": true,
+							"user-agent": true,
+							"connection": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/products?status=em falta&name=poss",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "status",
+									"value": "em falta",
+									"description": "Utilize os valores fixos: em estoque/em reposição/em falta"
+								},
+								{
+									"key": "name",
+									"value": "poss",
+									"description": "Irá filtrar os nomes que contem um trecho de texto igual ao valor"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Products",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/products",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:19:44 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"links\": {\n        \"first\": \"http://localhost:8005/api/products?page=1\",\n        \"last\": \"http://localhost:8005/api/products?page=50\",\n        \"prev\": null,\n        \"next\": \"http://localhost:8005/api/products?page=2\"\n    },\n    \"data\": [\n        {\n            \"name\": \"est\",\n            \"description\": \"Maxime veritatis eius aut voluptas nemo.\",\n            \"price\": \"664.25\"\n        },\n        {\n            \"name\": \"eos\",\n            \"description\": \"Praesentium exercitationem qui sed aut optio.\",\n            \"price\": \"974.07\"\n        },\n        {\n            \"name\": \"explicabo\",\n            \"description\": \"Quia accusamus nihil nostrum.\",\n            \"price\": \"33.36\"\n        },\n        {\n            \"name\": \"possimus\",\n            \"description\": \"Est veniam quia culpa dolorem amet.\",\n            \"price\": \"17.19\"\n        },\n        {\n            \"name\": \"est\",\n            \"description\": \"Aut et aut ipsam et sed.\",\n            \"price\": \"877.09\"\n        },\n        {\n            \"name\": \"quasi\",\n            \"description\": \"Quisquam tempora est cum ex voluptas ut.\",\n            \"price\": \"214.53\"\n        },\n        {\n            \"name\": \"facilis\",\n            \"description\": \"Mollitia velit vel dolores id vel assumenda.\",\n            \"price\": \"965.51\"\n        },\n        {\n            \"name\": \"inventore\",\n            \"description\": \"Architecto ducimus aut aut quibusdam voluptatem dolor.\",\n            \"price\": \"160.29\"\n        },\n        {\n            \"name\": \"est\",\n            \"description\": \"Sint voluptas provident et porro optio consequatur.\",\n            \"price\": \"836.52\"\n        },\n        {\n            \"name\": \"veniam\",\n            \"description\": \"Velit omnis iste rerum consequuntur modi.\",\n            \"price\": \"962.18\"\n        },\n        {\n            \"name\": \"hic\",\n            \"description\": \"Deserunt sed aut et blanditiis.\",\n            \"price\": \"279.42\"\n        },\n        {\n            \"name\": \"sint\",\n            \"description\": \"Repudiandae quae asperiores et sapiente.\",\n            \"price\": \"559.76\"\n        },\n        {\n            \"name\": \"quia\",\n            \"description\": \"Harum id et voluptate quia.\",\n            \"price\": \"737.31\"\n        },\n        {\n            \"name\": \"reiciendis\",\n            \"description\": \"Officia animi pariatur occaecati velit.\",\n            \"price\": \"395.69\"\n        },\n        {\n            \"name\": \"rem\",\n            \"description\": \"Laborum a est illo reiciendis.\",\n            \"price\": \"791.97\"\n        },\n        {\n            \"name\": \"est\",\n            \"description\": \"Voluptatem aperiam neque sunt excepturi eum eaque.\",\n            \"price\": \"843.90\"\n        },\n        {\n            \"name\": \"et\",\n            \"description\": \"Sint est saepe saepe aut.\",\n            \"price\": \"601.02\"\n        },\n        {\n            \"name\": \"omnis\",\n            \"description\": \"Soluta et ut accusantium quia.\",\n            \"price\": \"111.48\"\n        },\n        {\n            \"name\": \"doloribus\",\n            \"description\": \"Fugiat sint repellendus iure libero tempore.\",\n            \"price\": \"109.32\"\n        },\n        {\n            \"name\": \"temporibus\",\n            \"description\": \"Doloribus nemo et quam fuga vel sed dolores.\",\n            \"price\": \"231.64\"\n        }\n    ],\n    \"current_page\": 1,\n    \"per_page\": 20,\n    \"total\": 1000\n}"
+						},
+						{
+							"name": "Get All Products with filter",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8005/api/products?status=em falta&name=poss",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "status",
+											"value": "em falta",
+											"description": "Utilize os valores fixos: em estoque/em reposição/em falta"
+										},
+										{
+											"key": "name",
+											"value": "poss",
+											"description": "Irá filtrar os nomes que contem um trecho de texto igual ao valor"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:39:51 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"links\": {\n        \"first\": \"http://localhost:8005/api/products?status=em%20falta&name=poss&page=1\",\n        \"last\": \"http://localhost:8005/api/products?status=em%20falta&name=poss&page=1\",\n        \"prev\": null,\n        \"next\": null\n    },\n    \"data\": [\n        {\n            \"name\": \"possimus\",\n            \"description\": \"Est veniam quia culpa dolorem amet.\",\n            \"price\": \"17.19\"\n        },\n        {\n            \"name\": \"possimus\",\n            \"description\": \"Atque et cupiditate ea et quaerat adipisci sit aperiam.\",\n            \"price\": \"431.38\"\n        },\n        {\n            \"name\": \"possimus\",\n            \"description\": \"Rerum vitae eius minus ipsum.\",\n            \"price\": \"865.63\"\n        },\n        {\n            \"name\": \"possimus\",\n            \"description\": \"Commodi aspernatur ullam possimus.\",\n            \"price\": \"862.77\"\n        }\n    ],\n    \"current_page\": 1,\n    \"per_page\": 20,\n    \"total\": 4\n}"
+						}
+					]
+				},
+				{
+					"name": "Show",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/products/1",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get A Specific Product",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8005/api/products/1",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:40:51 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"asdfaslkfsalfsda\",\n    \"description\": \"Maxime veritatis eius aut voluptas nemo.\",\n    \"price\": \"1455.00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/products?name=Nome do produto&description=Descricao desejada&status=em reposição&price=122&stock_quantity=123",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"products"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Nome do produto"
+								},
+								{
+									"key": "description",
+									"value": "Descricao desejada"
+								},
+								{
+									"key": "status",
+									"value": "em reposição",
+									"description": "Utilize os valores fixos: em estoque/em reposição/em falta"
+								},
+								{
+									"key": "price",
+									"value": "122",
+									"description": "Valor decimal "
+								},
+								{
+									"key": "stock_quantity",
+									"value": "123",
+									"description": "Apenas valores inteiros."
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Product",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8005/api/products?name=Nome do produto&description=Descricao desejada&status=em reposição&price=122&stock_quantity=123",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Nome do produto",
+											"description": "Required: String"
+										},
+										{
+											"key": "description",
+											"value": "Descricao desejada",
+											"description": "Opcional: String"
+										},
+										{
+											"key": "status",
+											"value": "em reposição",
+											"description": "Required: [\"em estoque\", \"em reposição\", \"em falta\"]"
+										},
+										{
+											"key": "price",
+											"value": "122",
+											"description": "Required: Decimal "
+										},
+										{
+											"key": "stock_quantity",
+											"value": "123",
+											"description": "Required: Integer"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:42:01 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Nome do produto\",\n    \"description\": \"Descricao desejada\",\n    \"price\": \"122.00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Update",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/products/1?name=Nome Alterado&status=em falta&price=1455&stock_quantity=123",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"products",
+								"1"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "Nome Alterado",
+									"description": "Opcional: String"
+								},
+								{
+									"key": "description",
+									"value": null,
+									"description": "Opcional: String",
+									"disabled": true
+								},
+								{
+									"key": "status",
+									"value": "em falta",
+									"description": "Opcional: Utilize os valores fixos: em estoque/em reposição/em falta"
+								},
+								{
+									"key": "price",
+									"value": "1455",
+									"description": "Opcional: Decimal"
+								},
+								{
+									"key": "stock_quantity",
+									"value": "123",
+									"description": "Opcional: Integer"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Atualiza Produto",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8005/api/products/1?name=Nome Alterado&status=em falta&price=1455&stock_quantity=123",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products",
+										"1"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "Nome Alterado"
+										},
+										{
+											"key": "description",
+											"value": null,
+											"disabled": true
+										},
+										{
+											"key": "status",
+											"value": "em falta",
+											"description": "Utilize os valores fixos: em estoque/em reposição/em falta"
+										},
+										{
+											"key": "price",
+											"value": "1455"
+										},
+										{
+											"key": "stock_quantity",
+											"value": "123"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Transfer-Encoding",
+									"value": "chunked"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:43:33 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"name\": \"Nome Alterado\",\n    \"description\": \"Maxime veritatis eius aut voluptas nemo.\",\n    \"price\": \"1455.00\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {
+							"accept": true
+						}
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Accept",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:8005/api/products/111",
+							"host": [
+								"localhost"
+							],
+							"port": "8005",
+							"path": [
+								"api",
+								"products",
+								"111"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Deleta Produto",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "Accept",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "localhost:8005/api/products/111",
+									"host": [
+										"localhost"
+									],
+									"port": "8005",
+									"path": [
+										"api",
+										"products",
+										"111"
+									]
+								}
+							},
+							"status": "No Content",
+							"code": 204,
+							"_postman_previewlanguage": "plain",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx/1.27.2"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "X-Powered-By",
+									"value": "PHP/8.3.13"
+								},
+								{
+									"key": "Cache-Control",
+									"value": "no-cache, private"
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 09 Nov 2024 01:20:13 GMT"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								}
+							],
+							"cookie": [],
+							"body": null
+						}
+					]
+				}
+			]
+		}
+	]
+}
