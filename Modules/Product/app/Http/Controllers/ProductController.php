@@ -7,6 +7,7 @@ use Illuminate\Http\Response;
 
 use Modules\Product\App\Models\Product;
 use Modules\Product\App\Resources\ProductResource;
+use Modules\Product\App\Http\Requests\StoreProductRequest;
 
 class ProductController extends BaseController
 {
@@ -28,10 +29,14 @@ class ProductController extends BaseController
 
     /**
      * Store a newly created resource in storage.
+     *
+     * @param \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(StoreProductRequest $request)
     {
-        //
+        $product = Product::create($request->validated());
+        return response()->json(new ProductResource($product), Response::HTTP_CREATED);
     }
 
     /**
