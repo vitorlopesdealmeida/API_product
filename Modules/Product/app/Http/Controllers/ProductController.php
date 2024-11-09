@@ -62,8 +62,9 @@ class ProductController extends BaseController
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy($id)
+    public function destroy(Product $product)
     {
-        //
+        Product::destroy($product->id);
+        return response()->json(null, Response::HTTP_NO_CONTENT);
     }
 }
