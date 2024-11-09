@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 
 use Modules\Product\App\Models\Product;
+use Modules\Product\App\Repositories\ProductRepository;
 use Modules\Product\App\Resources\ProductResource;
 use Modules\Product\App\Http\Requests\StoreProductRequest;
 
@@ -41,10 +42,11 @@ class ProductController extends BaseController
 
     /**
      * Show the specified resource.
+     *
      */
-    public function show($id)
+    public function show(Product $product)
     {
-//        return view('product::show');
+        return response()->json(new ProductResource($product), Response::HTTP_OK);
     }
 
     /**
