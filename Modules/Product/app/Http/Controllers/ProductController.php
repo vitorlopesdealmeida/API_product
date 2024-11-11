@@ -16,7 +16,7 @@ class ProductController extends BaseController
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\JsonResponse
      */
     public function index(Request $request)
     {
@@ -32,8 +32,6 @@ class ProductController extends BaseController
     /**
      * Store a newly created resource in storage.
      *
-     * @param \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
      */
     public function store(StoreProductRequest $request)
     {
@@ -44,6 +42,8 @@ class ProductController extends BaseController
     /**
      * Show the specified resource.
      *
+     * @param \Modules\Product\App\Models\Product  $product
+     * @return \Illuminate\Http\JsonResponse
      */
     public function show(Product $product)
     {
@@ -52,6 +52,10 @@ class ProductController extends BaseController
 
     /**
      * Update the specified resource in storage.
+     *
+     * @param \Modules\Product\App\Http\Requests\UpdateProductRequest  $request
+     * @param \Modules\Product\App\Models\Product  $product
+     * @return \Illuminate\Http\JsonResponse
      */
     public function update(UpdateProductRequest $request, Product $product)
     {
@@ -61,6 +65,9 @@ class ProductController extends BaseController
 
     /**
      * Remove the specified resource from storage.
+     *
+     * @param \Modules\Product\App\Models\Product  $product
+     * @return \Illuminate\Http\JsonResponse
      */
     public function destroy(Product $product)
     {
